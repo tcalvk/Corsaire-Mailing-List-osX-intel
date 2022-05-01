@@ -8,7 +8,7 @@ import io
 
 
 def check_for_updates(current_version):
-    url = "https://raw.githubusercontent.com/tcalvk/Create_Mailing_List/main/version.csv" # Make sure the url is the raw version of the file on GitHub
+    url = "https://raw.githubusercontent.com/tcalvk/Corsaire-Mailing-List-osX-intel/master/version.csv" # Make sure the url is the raw version of the file on GitHub
     download = requests.get(url).content
     df = pd.read_csv(io.StringIO(download.decode('utf-8')))
     new_version_raw = df.to_csv()
