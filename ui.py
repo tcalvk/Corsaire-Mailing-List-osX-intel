@@ -6,7 +6,7 @@ from tkinter import messagebox
 import getpass
 
 #place current version number here (as global variable)
-current_version = float(0.0)
+current_version = float(1.0)
 appName = 'Email List App'
 USER = getpass.getuser()
 
