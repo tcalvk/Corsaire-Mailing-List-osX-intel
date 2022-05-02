@@ -1,25 +1,29 @@
 #!/usr/bin/env python3
 import tkinter as tk
+from turtle import bgcolor, left
 import create_mailing_list as cm
 import os
-from tkinter import messagebox 
+from tkinter import LEFT, messagebox 
 import getpass
 
 #place current version number here (as global variable)
 current_version = float(1.0)
-appName = 'Email List App'
+appName = 'Corsaire Mailing List'
 USER = getpass.getuser()
 
 def build_window():
     window = tk.Tk()
-    window.title("Create Mailing List")
-    window.geometry("300x150")
-    create_buttons()  
-    window.mainloop()
+    window.title(f"Corsaire Mailing List        ver{current_version}")
+    window.geometry("400x150")
 
-def create_buttons():
-    button1 = tk.Button(text="Click to run", command=run)
+    label1 = tk.Label(window, text="Create a mailing list from a .csv file")
+    label1.pack()
+
+    button1 = tk.Button(window, text="Click to run", command=run)
     button1.pack()
+
+    window.mainloop()
+    
 
 def run():
     verify = cm.create_list()
